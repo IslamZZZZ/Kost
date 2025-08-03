@@ -14,70 +14,36 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QDateEdit" name="dateEdit">
+   <widget class="QPushButton" name="ClickOnMeButton">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>50</y>
-      <width>110</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>100</y>
-      <width>241</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>Fq</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>E</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>180</y>
-      <width>113</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ffqag</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>410</y>
+      <x>400</x>
+      <y>330</y>
       <width>161</width>
       <height>61</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>DejaVu Serif Condensed</family>
+      <pointsize>10</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
     <property name="text">
      <string>HUI</string>
     </property>
-   </widget>
-   <widget class="QTableView" name="Fgwhf">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>180</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
+    <property name="checkable">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>

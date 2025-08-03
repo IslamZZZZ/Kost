@@ -18,7 +18,7 @@ qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 set(SOURCES
     src/main.cpp
     src/Database.cpp     # ← ОБЯЗАТЕЛЬНО добавь
-    # src/MainWindow.cpp  # если у тебя есть GUI-класс
+    src/MainWindow.cpp  # если у тебя есть GUI-класс
 )
 
 # Список заголовков (необязательно, но удобно)
@@ -26,6 +26,8 @@ set(HEADERS
     src/Database.h
     # src/MainWindow.h
 )
+
+set(CMAKE_AUTOMOC ON)
 
 add_executable(ExpensesApp
     ${SOURCES}
