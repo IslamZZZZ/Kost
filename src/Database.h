@@ -12,6 +12,7 @@
 class Database {
 public:
     Database(const QString& path = "expenses.db");  // можно без аргумента
+    QSqlDatabase& getDatabase();
 
     bool open();
     void initialize();
@@ -20,6 +21,8 @@ public:
                     const QString& description,
                     double         amount,
                     const QString& currency);
+
+    bool deleteById(int id);
 
     QSqlQuery getByDate(const QDate& date);
     double    totalByCategory(const QString& description);

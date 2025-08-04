@@ -15,6 +15,8 @@ bool Database::open() {
     return true;
 }
 
+QSqlDatabase& Database::getDatabase() { return db_; }
+
 void Database::initialize() {
     QSqlQuery query(db_);
     // Схема таблицы. Обрати внимание: после каждого фрагмента
@@ -84,4 +86,15 @@ double Database::totalByCategory(const QString& description) {
         return query.value(0).toDouble();
     }
     return 0.0;
+}
+
+bool Database::deleteById(int id) {
+    QSqlQuery query(db_);
+    query.prepare("DELETE FROM expenses WHERE id = :id");
+    query.bindValue(":id", id);
+    if (!query.exec()) {
+        qDebug() << "Ошибка удаления:" << query.lastError().text();
+        return false;
+    }
+    return true;
 }

@@ -9,7 +9,9 @@
 #include "MainWindow.h"
 
 int main(int argc, char *argv[]) {
-    // 1) Создаём объект и сразу пытаемся открыть БД
+
+
+
     QApplication app(argc, argv);
 
     MainWindow w;

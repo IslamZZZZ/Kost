@@ -1,6 +1,8 @@
 #pragma once
 
 #include <QMainWindow>
+#include <QSqlQueryModel>
+#include "Database.h"
 
 namespace Ui{
     class MainWindow;
@@ -14,8 +16,14 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_ClickOnMeButton_clicked();
+    void on_ExecuteButtonAdd_clicked();
+    void on_ExecuteButtonDelete_clicked();
+
 
 private:
     Ui::MainWindow *ui;
+    QSqlQueryModel *expensesModel_;
+    Database db_;
+
+    void refreshTable();
 };

@@ -24,8 +24,14 @@ set(SOURCES
 # Список заголовков (необязательно, но удобно)
 set(HEADERS
     src/Database.h
-    # src/MainWindow.h
+    src/MainWindow.h
 )
+
+#include_directories(BEFORE SYSTEM /usr/include/x86_64-linux-gnu/qt5)
+#include_directories(AFTER EXCLUDE /usr/include/x86_64-linux-gnu/qt6)
+#set(QT_MOC_EXECUTABLE /usr/lib/qt5/bin/moc)
+
+
 
 set(CMAKE_AUTOMOC ON)
 
